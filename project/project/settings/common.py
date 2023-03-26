@@ -152,6 +152,8 @@ class Common(Configuration):
         },
     ]
 
+    AUTH_USER_MODEL = 'user.User'
+    
     AUTHENTICATION_BACKENDS = [
         # Custom Authentication Backend
         'django.contrib.auth.backends.ModelBackend',
