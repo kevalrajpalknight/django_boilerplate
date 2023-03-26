@@ -25,6 +25,7 @@ class Common(Configuration):
         'rest_framework_simplejwt',  # for the JWT authentication
         'drf_yasg', # for Swagger Open API
 
+        'core.apps.CoreConfig',
     )
 
     # https://docs.djangoproject.com/en/2.0/topics/http/middleware/
