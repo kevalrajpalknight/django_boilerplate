@@ -26,6 +26,7 @@ class Common(Configuration):
         'drf_yasg', # for Swagger Open API
 
         'core.apps.CoreConfig',
+        'user.apps.UserConfig',
     )
 
     # https://docs.djangoproject.com/en/2.0/topics/http/middleware/
