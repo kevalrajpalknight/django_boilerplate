@@ -1,0 +1,10 @@
+TODO: Modify this
+site_name: project
+site_description: Project description.
+repo_url: https://github.com/username/repo-name
+site_dir: site
+copyright: Copyright &copy; 2020, <a href="https://github.com/username">username</a>.
+dev_addr: 0.0.0.0:8001
+
+nav:
+  - Home: 'index.md'
