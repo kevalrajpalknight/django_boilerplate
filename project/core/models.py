@@ -97,3 +97,45 @@ class SlugBaseModel(BaseModel, SoftDeleteModel, models.Model):
 
     class Meta:
         abstract = True
+
+class Media(BaseModel, models.Model):
+    """ 
+    This table stores information about media files uploaded to the system.
+    Columns: 
+    - `filepath`: A string representing the path of the media file. 
+    - `mediatype`: A string representing the type of media (e.g. image, video, audio).
+    Returns: models.Model. 
+    """
+    MEDIA_TYPE_CHOICE = (
+        ('image', "Image"),
+        ('video', "Video"),
+        ('document', "Document"),
+    )
+    title = models.CharField(
+        verbose_name=_('Title'),
+        max_length=250,
+        db_column="title",
+        null=True,
+        blank=True
+    )
+    file_path = models.FileField(
+        verbose_name=_('File Path'),
+        unique=True,
+        upload_to=upload_directory_path,
+        db_column="file_path",
+    )
+    media_type = models.CharField(
+        verbose_name=_('Media Type'),
+        max_length=250,
+        db_column="media_type",
+        choices=MEDIA_TYPE_CHOICE,
+        default='image'
+    )
+
+    def __str__(self):
+        return str(self.file_path)
+
+    class Meta:
+        verbose_name = "Media"
+        verbose_name_plural = "Media"
+        db_table = "Media"
