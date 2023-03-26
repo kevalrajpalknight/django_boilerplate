@@ -43,8 +43,8 @@ class Common(Configuration):
         # https://docs.djangoproject.com/en/4.1/ref/middleware/#django.middleware.common.BrokenLinkEmailsMiddleware
         "django.middleware.common.BrokenLinkEmailsMiddleware",
 
-        # # To validate the token signature and authenticate each request.
-        # "core.middleware.JWTMiddleware",
+        # To validate the token signature and authenticate each request.
+        "core.middleware.JWTMiddleware",
 
     )
 
@@ -153,7 +153,7 @@ class Common(Configuration):
     ]
 
     AUTH_USER_MODEL = 'user.User'
-    
+
     AUTHENTICATION_BACKENDS = [
         # Custom Authentication Backend
         'django.contrib.auth.backends.ModelBackend',
@@ -248,9 +248,9 @@ class Common(Configuration):
         'DEFAULT_PERMISSION_CLASSES': [
             'rest_framework.permissions.IsAuthenticated',
         ],
-        # 'DEFAULT_AUTHENTICATION_CLASSES': (
-        #     'core.authentications.CustomJWTAuthentication',
-        # )
+        'DEFAULT_AUTHENTICATION_CLASSES': (
+            'core.authentications.CustomJWTAuthentication',
+        )
     }
 
     # Django Rest Framework Simple JWT
