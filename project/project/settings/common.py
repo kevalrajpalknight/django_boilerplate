@@ -3,12 +3,16 @@ from datetime import timedelta
 from distutils.util import strtobool
 import dj_database_url
 from configurations import Configuration
+from django.core.management.commands.runserver import Command as runserver
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_URL = os.environ.get('BASE_URL', )
 
 
 class Common(Configuration):
+    runserver.default_addr = os.environ.get('DJANGO_ADDRESS', '127.0.0.1')
+    runserver.default_port = int(os.environ.get('DJANGO_PORT', 8000))
+
     INSTALLED_APPS = (
         'django.contrib.admin',
         'django.contrib.auth',
