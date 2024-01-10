@@ -23,5 +23,6 @@
   "use_async": "y",
   "use_simple_jwt": "y",
   "use_jazzmin": "y",
-  "use_port": "8000"
+  "use_port": "8000",
+  "use_custom_simple_jwt": "n"
 }
