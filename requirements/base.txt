@@ -1,0 +1,20 @@
+Django==4.2.7
+psycopg2-binary==2.9.9
+python-decouple==3.8
+pytz==2023.3
+django-model-utils==4.3.1
+drf-standardized-errors==0.12.6
+
+{% if cookiecutter.use_jazzmin == "y" %}
+django-jazzmin==2.6.0
+{% endif %}
+
+{% if cookiecutter.use_drf == "y" %}
+django-rest-framework==0.1.0
+django-cors-headers==4.3.0
+drf-yasg==1.21.7
+{% endif %}
+
+{% if cookiecutter.use_simple_jwt == "y" %}
+djangorestframework-simplejwt==5.3.0
+{% endif %}

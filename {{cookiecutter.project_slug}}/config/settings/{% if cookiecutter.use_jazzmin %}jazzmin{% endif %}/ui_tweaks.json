@@ -1,0 +1,31 @@
+{
+  "navbar_small_text": false,
+  "footer_small_text": false,
+  "body_small_text": false,
+  "brand_small_text": false,
+  "brand_colour": "navbar-navy",
+  "accent": "accent-navy",
+  "navbar": "navbar-navy navbar-dark",
+  "no_navbar_border": false,
+  "navbar_fixed": false,
+  "layout_boxed": false,
+  "footer_fixed": false,
+  "sidebar_fixed": true,
+  "sidebar": "sidebar-light-navy",
+  "sidebar_nav_small_text": false,
+  "sidebar_disable_expand": false,
+  "sidebar_nav_child_indent": false,
+  "sidebar_nav_compact_style": false,
+  "sidebar_nav_legacy_style": false,
+  "sidebar_nav_flat_style": false,
+  "theme": "materia",
+  "dark_mode_theme": null,
+  "button_classes": {
+    "primary": "btn-outline-primary",
+    "secondary": "btn-outline-secondary",
+    "info": "btn-info",
+    "warning": "btn-warning",
+    "danger": "btn-danger",
+    "success": "btn-success"
+  }
+}

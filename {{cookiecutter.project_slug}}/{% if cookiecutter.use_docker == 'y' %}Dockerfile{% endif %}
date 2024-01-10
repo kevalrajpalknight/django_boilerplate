@@ -1,0 +1,24 @@
+FROM python:3.10-buster
+ENV PYTHONUNBUFFERED 1
+
+# Setup working directory
+RUN mkdir /code
+WORKDIR /code
+COPY requirements.txt /code/
+
+# Install requirements
+RUN pip install --upgrade pip 
+RUN pip install -r requirements.txt
+
+COPY . /code/
+
+
+RUN chmod +x /code/entrypoint.sh
+{% if cookiecutter.username_type == 'email' %}
+ENV DJANGO_SUPERUSER_EMAIL=admin@gmail.com
+{% endif %}
+{% if cookiecutter.username_type == 'username' %}
+ENV DJANGO_SUPERUSER_EMAIL=admin
+{% endif %}
+ENV DJANGO_SUPERUSER_PASSWORD=1234
+ENTRYPOINT ["sh", "/code/entrypoint.sh"]

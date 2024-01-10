@@ -1,0 +1,4 @@
+-r test.txt
+
+django-debug-toolbar==4.2.0
+flake8-print==5.0.0

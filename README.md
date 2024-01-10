@@ -1,1 +1,1 @@
-# django_boilerplate
+# django-cookiecutter

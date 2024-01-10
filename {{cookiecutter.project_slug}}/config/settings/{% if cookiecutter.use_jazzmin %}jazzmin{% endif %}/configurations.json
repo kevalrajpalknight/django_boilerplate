@@ -1,0 +1,23 @@
+{
+  "site_title": "{{ cookiecutter.project_name }}",
+  "site_header": "{{ cookiecutter.project_name }}",
+  "site_brand": "{{ cookiecutter.project_name }}",
+  "copyright": "{{ cookiecutter.project_name }}",
+  "site_logo_classes": "img-fluid",
+  "site_logo": "images/favicon.png",
+  "site_icon": "images/favicon.png",
+  "login_logo": "images/logo.png",
+  "order_with_respect_to": [
+    "users",
+    "users.User"
+  ],
+  "icons": {
+    "users.User": "fas fa-users"
+  },
+  "hide_apps": [
+    "auth",
+    "core"
+  ],
+  "changeform_format": "single",
+  "custom_css": "admin/css/style.css"
+}

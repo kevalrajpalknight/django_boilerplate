@@ -1,0 +1,26 @@
+[flake8]
+
+# Whitespace before ':' (E203)
+# Too many leading '#' for block comment (E266)
+# Line too long ( > 79 characters) (E501)
+# F-string is missing placeholders (F541)
+# Line break before binary operator (W503)
+# All FI-* error codes are for checking future imports
+ignore = E203, E266, E501, F541, W503
+    FI10, FI11, FI12, FI13, FI14, FI15, FI16, FI17, FI58
+
+exclude =
+    .git,
+    manage.py,
+    __pycache__,
+    node_modules,
+    src,
+    *env,
+    */migrations/*.py
+    release.py
+
+# Ignore print() statements in scripts
+# Ignore some styling issues in settings.py, given it's configuration
+per-file-ignores =
+    CoinQuant/settings:F401,F403,E402
+    :WPS421  # Ignore print statements (requires flake8-print plugin)
