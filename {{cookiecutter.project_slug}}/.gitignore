@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,django,redis,git
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,django,redis,git
+# Created by https://www.toptal.com/developers/gitignore/api/python,django,git,virtualenv,redis
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,django,git,virtualenv,redis
 
 ### Django ###
 *.log
@@ -283,7 +283,16 @@ pyrightconfig.json
 
 *.rdb
 
-# End of https://www.toptal.com/developers/gitignore/api/python,django,redis,git
+### VirtualEnv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
 
-# vscode
-.vscode
+# End of https://www.toptal.com/developers/gitignore/api/python,django,git,virtualenv,redis
