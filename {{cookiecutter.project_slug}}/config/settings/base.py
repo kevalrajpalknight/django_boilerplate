@@ -49,7 +49,6 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "core.apps.CoreConfig",
     "users.apps.UsersConfig",
 ]
 
@@ -71,7 +70,7 @@ ROOT_URLCONF = "config.urls"
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-AUTH_USER_MODEL = "user.User"
+AUTH_USER_MODEL = "users.User"
 
 # ==============================================================================
 # MIDDLEWARE SETTINGS
@@ -331,11 +330,11 @@ SWAGGER_SETTINGS = {
 JAZZMIN_SETTINGS = None
 JAZZMIN_UI_TWEAKS = None
 
-with open(BASE_DIR / "settings" / "jazzmin" / "configurations.json") as f:
+with open(BASE_DIR / "config" / "settings" / "jazzmin" / "configurations.json") as f:
     data = json.load(f)
     JAZZMIN_SETTINGS = {"show_ui_builder": DEBUG, **data}
 
-with open(BASE_DIR / "settings" / "jazzmin" / "ui_tweaks.json") as f:
+with open(BASE_DIR / "config" / "settings" / "jazzmin" / "ui_tweaks.json") as f:
     data = json.load(f)
     JAZZMIN_UI_TWEAKS = {**data}
 
