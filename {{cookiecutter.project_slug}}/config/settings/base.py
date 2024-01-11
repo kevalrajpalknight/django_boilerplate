@@ -301,6 +301,8 @@ REST_FRAMEWORK = {
         {% if cookiecutter.use_simple_jwt == "y" %}
             {% if cookiecutter.use_custom_simple_jwt == "y" %}
                 "core.authentications.CustomJWTAuthentication",
+            {% else %}
+                "rest_framework_simplejwt.authentication.JWTAuthentication",
             {% endif %}
         {% endif %}
     ),
