@@ -8,21 +8,21 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    
+
     {% if cookiecutter.use_simple_jwt == "y" %}
     #JWT tokens urls
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     {% endif %}
-   
+
     {% if cookiecutter.use_django_rq == "y" %}
     # Django-rq
     path("admin/rq/", include("django_rq.urls")),
-    {% endif %}  
+    {% endif %}
 
     {% if cookiecutter.use_drf == "y" %}
     # API
-    path("api/v1/", include("config.api", namespace="v1")),  
+    path("api/v1/", include("config.api", namespace="v1")),
     {% else %}
     path("user/", include("users.urls")),
     {% endif %}
